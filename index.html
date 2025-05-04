@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Mentor | Tip calculator app">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <h1>SPLITTER</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="calculator">
+      <form>
+        <div class="bill-info">
+          <div class="form-group">
+            <label for="input-bill">Bill</label>
+            <div class="input-wrapper">
+              <input type="text" id="input-bill" inputmode="decimal" pattern="[0-9]*[.]?[0-9]*" placeholder="0">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tip">Select Tip %</label>
+            <div class="tip-wrapper">
+              <button type="button" id="select-tip" value="5%">5%</button>
+              <button type="button" id="select-tip" value="10%">10%</button>
+              <button type="button" id="select-tip" value="15%">15%</button>
+              <button type="button" id="select-tip" value="25%">25%</button>
+              <button type="button" id="select-tip" value="50%">50%</button>
+              <div class="input-wrapper" id="select-tip">
+                <input type="text" id="custom-tip" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*" placeholder="Custom">
+              </div>
+              <p class="tip-msg">Please input max 100</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="number-of-people">Number of People</label>
+            <p class="people-msg">Can't be zero</p>
+            <div class="input-wrapper">
+              <input type="text" id="number-of-people" inputmode="decimal" pattern="[0-9]*" placeholder="0" value="1">
+            </div>
+          </div>
+        </div>
+
+        <section class="result">
+          <div class="result-wrapper">
+            <div class="result-item">
+              <div class="left">
+                <h2>Tip Amount</h2>
+                <p>/ person</p>
+              </div>
+
+              <div class="right">
+                <p class="result-tip">$0.00</p>
+              </div>
+            </div>
+
+            <div class="result-item">
+              <div class="left">
+                <h2>Total</h2>
+                <p>/ person</p>
+              </div>
+
+              <div class="right">
+                <p class="result-total">$0.00</p>
+              </div>
+            </div>
+          </div>
+
+          <button type="reset" id="reset">Reset</button>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-credit">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/arisdwii">arisdwii</a>.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
